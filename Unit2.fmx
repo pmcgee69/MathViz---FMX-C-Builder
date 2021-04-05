@@ -1,0 +1,344 @@
+object Form3D2: TForm3D2
+  Left = 0
+  Top = 0
+  Camera = Camera1
+  Caption = 'Form3D2'
+  Color = claBlack
+  ClientHeight = 776
+  ClientWidth = 923
+  UsingDesignCamera = False
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = Form3DCreate
+  DesignerMasterStyle = 0
+  object Camera1: TCamera
+    AngleOfView = 45.000000000000000000
+    Position.Y = -200.000000000000000000
+    Position.Z = -200.000000000000000000
+    RotationAngle.X = 315.000000000000000000
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Quanternion = 
+      '(-0.382683485746384,-3.22578896927439E-9,-2.96211788430867E-9,0.' +
+      '923879623413086)'
+  end
+  object Layer3D1: TLayer3D
+    Height = 654.000000000000000000
+    Position.X = 95.000000000000000000
+    Position.Y = 324.000000000000000000
+    Projection = Screen
+    Resolution = 50
+    StyleLookup = 'backgroundstyle'
+    Width = 190.000000000000000000
+    object Button1: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'sin(x*x+z*z)/(x*x+z*z)'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'exp(sin x - cos z)'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'exp(sin x + cos z)'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 152.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'exp(sin('#8730'|x|)+cos('#8730'|z|))'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = Button4Click
+    end
+    object Button5: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'exp(arctan2(x*x,z*z))'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = Button5Click
+    end
+    object Panel1: TPanel
+      Position.X = 32.000000000000000000
+      Position.Y = 248.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 329.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object sbDn: TSpeedButton
+        Position.X = 40.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        object Path1: TPath
+          Align = Center
+          Data.Path = {
+            04000000000000000000000000000000010000000000803F0000004001000000
+            0000004000000000010000000000000000000000}
+          Fill.Kind = Gradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          HitTest = False
+          Size.Width = 32.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object sbLt: TSpeedButton
+        Position.Y = 40.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        object Path3: TPath
+          Align = Center
+          Data.Path = {
+            0400000000000000000000400000000001000000000000400000004001000000
+            000000000000803F010000000000004000000000}
+          Fill.Kind = Gradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          HitTest = False
+          Size.Width = 32.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object sbRt: TSpeedButton
+        Position.X = 77.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        object Path4: TPath
+          Align = Center
+          Data.Path = {
+            0400000000000000000000000000000001000000000000000000004001000000
+            000000400000803F010000000000000000000000}
+          Fill.Kind = Gradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          HitTest = False
+          Size.Width = 32.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object sbUp: TSpeedButton
+        Position.X = 40.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        object Path2: TPath
+          Align = Center
+          Data.Path = {
+            04000000000000000000000000000040010000000000803F0000000001000000
+            0000004000000040010000000000000000000040}
+          Fill.Kind = Gradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          HitTest = False
+          Size.Width = 32.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object tbZoom: TTrackBar
+        CanParentFocus = True
+        Max = 5.000000000000000000
+        Min = 1.000000000000000000
+        Orientation = Vertical
+        Position.X = 56.000000000000000000
+        Position.Y = 125.000000000000000000
+        Size.Width = 19.000000000000000000
+        Size.Height = 200.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Value = 2.500000000000000000
+        OnChange = tbZoomChange
+      end
+      object ArcDial1: TArcDial
+        Position.X = 46.000000000000000000
+        Position.Y = 46.000000000000000000
+        Size.Width = 32.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        OnChange = ArcDial1Change
+      end
+    end
+    object CheckBox1: TCheckBox
+      IsChecked = True
+      Position.X = 24.000000000000000000
+      Position.Y = 580.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Display grids at (0,0,0)'
+      OnChange = CheckBox1Change
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 610.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Zoom : '
+    end
+  end
+  object Layout3D1: TLayout3D
+    Height = 4.000000000000000000
+    HitTest = False
+    Scale.X = 0.100000001490116100
+    Scale.Y = 0.100000001490116100
+    Scale.Z = 0.100000001490116100
+    Width = 5.000000000000000000
+    object GridXY: TGrid3D
+      Marks = 100.000000000000000000
+      Frequency = 100.000000000000000000
+      LineColor = x50505050
+      Width = 2000.000000000000000000
+      Height = 2000.000000000000000000
+      Depth = 0.001000000047497451
+      HitTest = False
+    end
+    object GridXZ: TGrid3D
+      Marks = 100.000000000000000000
+      Frequency = 100.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 2000.000000000000000000
+      Height = 2000.000000000000000000
+      Depth = 0.001000000047497451
+      HitTest = False
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object GridYZ: TGrid3D
+      Marks = 100.000000000000000000
+      Frequency = 100.000000000000000000
+      LineColor = x50505050
+      RotationAngle.Y = 90.000000000000000000
+      Width = 200.000000000000000000
+      Height = 200.000000000000000000
+      Depth = 0.001000000047497451
+      HitTest = False
+      Quanternion = '(0,0.70710676908493,0,0.70710676908493)'
+    end
+    object Mesh1: TMesh
+      Width = 30.000000000000000000
+      Height = 30.000000000000000000
+      Depth = 30.000000000000000000
+      TwoSide = True
+      MaterialSource = Mesh1MaterialSource
+    end
+    object Text3D1: TText3D
+      Position.Y = -500.000000000000000000
+      Position.Z = -500.000000000000000000
+      Scale.X = 2.000000000000000000
+      Scale.Y = 2.000000000000000000
+      Scale.Z = 2.000000000000000000
+      Width = 1000.000000000000000000
+      Height = 100.000000000000000000
+      Depth = 0.009999999776482582
+      Font.Size = 48.000000000000000000
+      Text = 'Select a function to graph'
+      Flatness = 1.000000000000000000
+      Sides = [Front, Back, Shaft]
+      MaterialSource = Text3D1MaterialSource
+    end
+  end
+  object Mesh1MaterialSource: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = claWhite
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+  end
+  object Text3D1MaterialSource: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = claWhite
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+  end
+  object Light1: TLight
+    Enabled = False
+    Color = xFFA0A0A0
+    LightType = Point
+    SpotCutOff = 180.000000000000000000
+    Position.Z = -5.000000000000000000
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+  end
+  object TextureMaterialSource1: TTextureMaterialSource
+    Left = 868
+    Top = 575
+  end
+end

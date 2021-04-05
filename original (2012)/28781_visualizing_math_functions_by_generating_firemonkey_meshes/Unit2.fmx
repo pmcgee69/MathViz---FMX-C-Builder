@@ -1,0 +1,307 @@
+object Form3D2: TForm3D2
+  Left = 0
+  Top = 0
+  Caption = 'Form3D2'
+  ClientHeight = 776
+  ClientWidth = 923
+  Visible = False
+  OnCreate = Form3DCreate
+  Color = claBlack
+  Camera = Camera1
+  UsingDesignCamera = False
+  object Camera1: TCamera
+    Position.Point = '(0,-200,-200)'
+    RotationAngle.Point = '(-45,0,0)'
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Opacity = 1.000000000000000000
+    Quanternion = 
+      '(-0.382683485746384,-3.22578896927439E-9,-2.96211788430867E-9,0.' +
+      '923879623413086)'
+  end
+  object Layer3D1: TLayer3D
+    Position.Point = '(95,290,0)'
+    Width = 190.000000000000000000
+    Height = 600.000000000000000000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    Projection = pjScreen
+    StyleLookup = 'backgroundstyle'
+    Quanternion = '(0,0,0,1)'
+    object Button1: TButton
+      Position.Point = '(8,8)'
+      Width = 177.000000000000000000
+      Height = 44.000000000000000000
+      OnClick = Button1Click
+      TabOrder = 0
+      Font.Size = 16.000000000000000000
+      Text = 'sin(x*x+z*z)/(x*x+z*z)'
+    end
+    object Button2: TButton
+      Position.Point = '(8,56)'
+      Width = 177.000000000000000000
+      Height = 44.000000000000000000
+      OnClick = Button2Click
+      TabOrder = 1
+      Font.Size = 16.000000000000000000
+      Text = 'exp(sin x - cos z)'
+    end
+    object Button3: TButton
+      Position.Point = '(8,104)'
+      Width = 177.000000000000000000
+      Height = 44.000000000000000000
+      OnClick = Button3Click
+      TabOrder = 2
+      Font.Size = 16.000000000000000000
+      Text = 'exp(sin x + cos z)'
+    end
+    object Button4: TButton
+      Position.Point = '(8,152)'
+      Width = 177.000000000000000000
+      Height = 44.000000000000000000
+      OnClick = Button4Click
+      TabOrder = 3
+      Font.Size = 16.000000000000000000
+      Text = 'exp(sin('#8730'|x|)+cos('#8730'|z|))'
+    end
+    object Button5: TButton
+      Position.Point = '(8,200)'
+      Width = 177.000000000000000000
+      Height = 44.000000000000000000
+      OnClick = Button5Click
+      TabOrder = 4
+      Font.Size = 16.000000000000000000
+      Text = 'exp(arctan2(x*x,z*z))'
+    end
+    object Panel1: TPanel
+      Position.Point = '(32,248)'
+      Width = 121.000000000000000000
+      Height = 329.000000000000000000
+      TabOrder = 5
+      object sbDn: TSpeedButton
+        Position.Point = '(40,80)'
+        Width = 44.000000000000000000
+        Height = 44.000000000000000000
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        TabOrder = 0
+        object Path1: TPath
+          Align = alCenter
+          Position.Point = '(6,6)'
+          Width = 32.000000000000000000
+          Height = 32.000000000000000000
+          HitTest = False
+          Fill.Kind = bkGradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          StrokeThickness = 3.000000000000000000
+          Data.Path = {
+            04000000000000000000000000000000010000000000803F0000004001000000
+            0000004000000000010000000000000000000000}
+        end
+      end
+      object sbLt: TSpeedButton
+        Position.Point = '(0,40)'
+        Width = 44.000000000000000000
+        Height = 44.000000000000000000
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        TabOrder = 1
+        object Path3: TPath
+          Align = alCenter
+          Position.Point = '(6,6)'
+          Width = 32.000000000000000000
+          Height = 32.000000000000000000
+          HitTest = False
+          Fill.Kind = bkGradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          StrokeThickness = 3.000000000000000000
+          Data.Path = {
+            0400000000000000000000400000000001000000000000400000004001000000
+            000000000000803F010000000000004000000000}
+        end
+      end
+      object sbRt: TSpeedButton
+        Position.Point = '(77,40)'
+        Width = 44.000000000000000000
+        Height = 44.000000000000000000
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        TabOrder = 2
+        object Path4: TPath
+          Align = alCenter
+          Position.Point = '(6,6)'
+          Width = 32.000000000000000000
+          Height = 32.000000000000000000
+          HitTest = False
+          Fill.Kind = bkGradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          StrokeThickness = 3.000000000000000000
+          Data.Path = {
+            0400000000000000000000000000000001000000000000000000004001000000
+            000000400000803F010000000000000000000000}
+        end
+      end
+      object sbUp: TSpeedButton
+        Position.Point = '(40,0)'
+        Width = 44.000000000000000000
+        Height = 44.000000000000000000
+        OnMouseDown = sbDnMouseDown
+        OnMouseUp = sbDnMouseUp
+        TabOrder = 3
+        object Path2: TPath
+          Align = alCenter
+          Position.Point = '(6,6)'
+          Width = 32.000000000000000000
+          Height = 32.000000000000000000
+          HitTest = False
+          Fill.Kind = bkGradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          StrokeThickness = 3.000000000000000000
+          Data.Path = {
+            04000000000000000000000000000040010000000000803F0000000001000000
+            0000004000000040010000000000000000000040}
+        end
+      end
+      object tbZoom: TTrackBar
+        Position.Point = '(56,125)'
+        Width = 15.000000000000000000
+        Height = 200.000000000000000000
+        TabOrder = 4
+        Min = 1.000000000000000000
+        Max = 50.000000000000000000
+        Orientation = orVertical
+        Value = 20.000000000000000000
+        OnChange = tbZoomChange
+      end
+      object ArcDial1: TArcDial
+        Position.Point = '(46,46)'
+        Width = 32.000000000000000000
+        Height = 32.000000000000000000
+        TabOrder = 5
+        OnChange = ArcDial1Change
+      end
+    end
+    object CheckBox1: TCheckBox
+      Position.Point = '(24,580)'
+      Width = 161.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 6
+      IsChecked = True
+      Text = 'Display grids at (0,0,0)'
+      OnChange = CheckBox1Change
+    end
+  end
+  object Layout3D1: TLayout3D
+    Scale.Point = '(0.100000001490116,0.100000001490116,0.100000001490116)'
+    Width = 5.000000000000000000
+    Height = 4.000000000000000000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    HitTest = False
+    Quanternion = '(0,0,0,1)'
+    object GridXY: TGrid3D
+      Width = 2000.000000000000000000
+      Height = 2000.000000000000000000
+      Depth = 0.001000000047497451
+      Opacity = 1.000000000000000000
+      HitTest = False
+      Marks = 100.000000000000000000
+      Frequency = 100.000000000000000000
+      LineColor = x50505050
+      Quanternion = '(0,0,0,1)'
+    end
+    object GridXZ: TGrid3D
+      RotationAngle.Point = '(90,0,0)'
+      Width = 2000.000000000000000000
+      Height = 2000.000000000000000000
+      Depth = 0.001000000047497451
+      Opacity = 1.000000000000000000
+      HitTest = False
+      Marks = 100.000000000000000000
+      Frequency = 100.000000000000000000
+      LineColor = x50505050
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object GridYZ: TGrid3D
+      RotationAngle.Point = '(0,90,0)'
+      Width = 2000.000000000000000000
+      Height = 2000.000000000000000000
+      Depth = 0.001000000047497451
+      Opacity = 1.000000000000000000
+      HitTest = False
+      Marks = 100.000000000000000000
+      Frequency = 100.000000000000000000
+      LineColor = x50505050
+      Quanternion = '(0,0.70710676908493,0,0.70710676908493)'
+    end
+    object Mesh1: TMesh
+      Width = 30.000000000000000000
+      Height = 30.000000000000000000
+      Depth = 30.000000000000000000
+      Opacity = 1.000000000000000000
+      TwoSide = True
+      Material.Ambient = claWhite
+      Material.Emissive = claWhite
+      Quanternion = '(0,0,0,1)'
+    end
+    object Text3D1: TText3D
+      Position.Point = '(0,-500,-500)'
+      Scale.Point = '(2,2,2)'
+      Width = 1000.000000000000000000
+      Height = 100.000000000000000000
+      Depth = 0.009999999776482582
+      Opacity = 1.000000000000000000
+      Material.Ambient = claWhite
+      Material.Emissive = claWhite
+      Flatness = 1.000000000000000000
+      Sides = [esFront, esBack, esShaft]
+      Font.Size = 48.000000000000000000
+      Text = 'Select a function to graph'
+      Quanternion = '(0,0,0,1)'
+    end
+  end
+  object Light1: TLight
+    Position.Point = '(0,0,-5)'
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Opacity = 1.000000000000000000
+    Ambient = xFF202020
+    Enabled = False
+    Diffuse = xFFA0A0A0
+    ConstantAttenuation = 1.000000000000000000
+    LightType = ltPoint
+    Specular = claWhite
+    SpotCutOff = 180.000000000000000000
+    Quanternion = '(0,0,0,1)'
+  end
+end
