@@ -27,6 +27,8 @@ Video - https://cc.embarcadero.com/Item/28921
 
 Other FMX 3D Resources:
 
+- (2021) Let’s Fly Ingenuity Helicopter 3D Model with C++ Builder on Windows - Yilmaz Yoru 
+https://learncplusplus.org/lets-fly-ingenuity-helicopter-3d-model-with-c-builder-on-windows/
 
 - (2021) Video of this github code : https://youtu.be/drR5Ty1MUhU
 
